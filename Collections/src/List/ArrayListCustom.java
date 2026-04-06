@@ -14,7 +14,6 @@ public class ArrayListCustom {
     public void add(Object data){
          if(count>=ar.length){
              int newsize= ar.length+(ar.length/2);
-             Object[] newAr=new Object[newsize];
              ar=Arrays.copyOf(ar, newsize);
          }
          ar[count++]=data;
@@ -33,7 +32,7 @@ public class ArrayListCustom {
         }
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         ArrayListCustom arrayListCustom = new ArrayListCustom(5);
         arrayListCustom.add(67);
         arrayListCustom.add(87);
