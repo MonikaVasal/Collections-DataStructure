@@ -47,7 +47,5 @@ public class CustomStackUsingArrayList {
         customStackUsingArrayList.pop();
         System.out.println(customStackUsingArrayList);
         System.out.println(customStackUsingArrayList.peek());
-
-
     }
 }

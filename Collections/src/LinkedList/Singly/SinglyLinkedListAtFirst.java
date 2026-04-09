@@ -10,7 +10,7 @@ public class SinglyLinkedListAtFirst {
             this.data=data;
         }
     }
-    Node head=null;
+           Node head=null;
     Node tail=null;
     public void add(Object value){
         Node node=new Node(value);
@@ -34,6 +34,30 @@ public class SinglyLinkedListAtFirst {
             temp=temp.next;
         }
         return stringJoiner.toString();
+    }
+
+    public Object remove(Object val){
+        Node temp=head;
+        if(head==null){
+            return "Linked list is empty";
+        }
+        else if(head.data==val){
+            Object value=head.data;
+            head=head.next;
+            return value;
+        }
+        else {
+            while (temp.next!= null) {
+                if(temp.next.data==val){
+                    Object value=temp.next.data;
+                    temp.next=temp.next.next;
+
+                    return value;
+                }
+                temp=temp.next;
+            }
+        }
+        return false;
     }
     public static void main(String args[]){
         SinglyLinkedListAtFirst singlyLinkedListAtEnd = new SinglyLinkedListAtFirst();

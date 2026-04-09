@@ -1,5 +1,6 @@
 package LinkedList.Singly;
 
+import java.sql.SQLOutput;
 import java.util.StringJoiner;
 
 public class SinglyLinkedListAtEnd {
@@ -34,6 +35,37 @@ public class SinglyLinkedListAtEnd {
         }
         return stringJoiner.toString();
     }
+
+    public Object remove(Object val){
+        Node temp=head;
+        if(head==null){
+            return "Linked list is empty";
+        }
+        else if(head.data==val){
+            Object value=head.data;
+            head=head.next;
+            return value;
+        }
+        else {
+            while (temp.next!= null) {
+                if(temp.next==tail){
+                    Node temp1=temp;
+                    tail=temp1;
+                }
+                else if(temp.next.data==val){
+                    Object value=temp.next.data;
+                    temp.next=temp.next.next;
+                    return value;
+                }
+                temp=temp.next;
+            }
+        }
+        return false;
+    }
+    public Object findFirstElement(){
+        return head.data;
+    }
+    public Object findLastElement(){return tail.data;}
     static void main(String args[]){
         SinglyLinkedListAtEnd singlyLinkedList = new SinglyLinkedListAtEnd();
         singlyLinkedList.add(10);
@@ -43,6 +75,12 @@ public class SinglyLinkedListAtEnd {
         singlyLinkedList.add(50);
         singlyLinkedList.add(60);
         singlyLinkedList.add("monika");
+        System.out.println(singlyLinkedList);
+        System.out.println(singlyLinkedList.remove(40));
+        System.out.println(singlyLinkedList);
+        System.out.println(singlyLinkedList.remove(30));
+        System.out.println(singlyLinkedList);
+        System.out.println(singlyLinkedList.remove(10));
         System.out.println(singlyLinkedList);
     }
 }
