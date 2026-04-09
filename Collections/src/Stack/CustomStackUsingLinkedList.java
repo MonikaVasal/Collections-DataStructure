@@ -1,7 +1,6 @@
 package Stack;
 
 import LinkedList.Singly.SinglyLinkedListAtEnd;
-import Queue.CustomQueueUsingArraylist;
 
 public class CustomStackUsingLinkedList {
     SinglyLinkedListAtEnd list;
@@ -25,7 +24,7 @@ public class CustomStackUsingLinkedList {
     }
 
     public Object top(){return list.findLastElement();}
-    public static void main(String args[]){
+    static void main(String args[]){
         CustomStackUsingLinkedList customStackUsingLinkedList = new CustomStackUsingLinkedList();
         customStackUsingLinkedList.push(10);
         customStackUsingLinkedList.push(20);

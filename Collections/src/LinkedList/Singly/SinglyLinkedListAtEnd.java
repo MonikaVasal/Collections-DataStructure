@@ -1,10 +1,8 @@
 package LinkedList.Singly;
-
-import java.sql.SQLOutput;
 import java.util.StringJoiner;
 
 public class SinglyLinkedListAtEnd {
-    class Node{
+    static class Node{
         Object data;
         Node next=null;
         Node(Object data){
@@ -49,8 +47,7 @@ public class SinglyLinkedListAtEnd {
         else {
             while (temp.next!= null) {
                 if(temp.next==tail){
-                    Node temp1=temp;
-                    tail=temp1;
+                    tail=temp;
                 }
                 else if(temp.next.data==val){
                     Object value=temp.next.data;

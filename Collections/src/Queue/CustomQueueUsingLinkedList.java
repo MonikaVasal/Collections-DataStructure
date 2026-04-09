@@ -32,7 +32,7 @@ class CustomQueueUsingLinkedList {
     }
 
 
-    public static void main(String args[]) {
+    static void main(String args[]) {
         CustomQueueUsingLinkedList customStackUsingLinkedList = new CustomQueueUsingLinkedList();
         customStackUsingLinkedList.offer(10);
         customStackUsingLinkedList.offer(20);

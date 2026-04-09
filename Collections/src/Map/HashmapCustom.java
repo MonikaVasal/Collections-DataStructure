@@ -2,8 +2,6 @@ package Map;
 
 import java.util.*;
 
-import static java.util.Arrays.compare;
-
 public class HashmapCustom {
     static void main(String[] args) {
 
@@ -21,13 +19,9 @@ public class HashmapCustom {
         /*Sorting the map by keys*/
         Set<Map.Entry<String,Integer>> st = mp.entrySet();
         List<Map.Entry<String,Integer>> list = new ArrayList<>(st);
-        Collections.sort(list,new Comparator<Map.Entry<String, Integer>>() {
-
-            @Override
-            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                // TODO Auto-generated method stub
-                return o1.getKey().compareTo(o2.getKey());
-            }
+        list.sort((o1, o2) -> {
+            // TODO Auto-generated method stub
+            return o1.getKey().compareTo(o2.getKey());
         });
         System.out.println(list);
     }

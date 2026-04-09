@@ -3,7 +3,7 @@ package LinkedList.Singly;
 import java.util.StringJoiner;
 
 public class SinglyLinkedListAtFirst {
-    class Node{
+    static class Node{
         Object data;
         Node next=null;
         Node(Object data){
@@ -13,7 +13,7 @@ public class SinglyLinkedListAtFirst {
            Node head=null;
     Node tail=null;
     public void add(Object value){
-        Node node=new Node(value);
+        Node node= new Node(value);
         if(head==null && tail==null){
             head=node;
             tail=node;
@@ -59,7 +59,7 @@ public class SinglyLinkedListAtFirst {
         }
         return false;
     }
-    public static void main(String args[]){
+    static void main(String args[]){
         SinglyLinkedListAtFirst singlyLinkedListAtEnd = new SinglyLinkedListAtFirst();
         singlyLinkedListAtEnd.add(10);
         singlyLinkedListAtEnd.add(20);
